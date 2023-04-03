@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Search from "./Search";
 import CurrentWeather from "./CurrentWeather";
 import Forecast from "./Forecast";
+import SourceLink from "./SourceLink";
 
 export default function App() {
   const [city, setCity] = useState("Lodz");
@@ -12,6 +13,7 @@ export default function App() {
       <Search onChangeCity={setCity} />
       <CurrentWeather city={city} />
       <Forecast />
+      <SourceLink />
     </div>
   );
 }
