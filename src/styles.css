@@ -1,0 +1,58 @@
+:root {
+  --myblue: #0086cb;
+  --sub_color: #e0eea4;
+}
+.App {
+  font-family: "Poppins", sans-serif;
+  margin: 0 20%;
+}
+.Search {
+  top: 0;
+  margin: 60px;
+}
+.Search input {
+  padding: 5px 80px;
+  border: 5px solid var(--myblue);
+  border-radius: 10px;
+  margin: 0;
+  background-color: var(--sub_color);
+}
+.Search .search_button {
+  color: var(--myblue);
+  border: 5px solid var(--myblue);
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 0;
+  background-color: var(--sub_color);
+}
+.CurrentWeather {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.WeatherInfo .temperature {
+  font-size: 40px;
+  margin: 0;
+}
+.WeatherInfo .addinfo {
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+}
+.DateInfo {
+  text-align: right;
+}
+.DateInfo .city {
+  font-size: 40px;
+}
+.DateInfo .currentDay {
+  font-size: 25px;
+  margin: 0;
+}
+.DateInfo .time {
+  margin: 0;
+}
+.DateInfo .date {
+  margin: 0;
+}
