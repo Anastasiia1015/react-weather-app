@@ -16,6 +16,7 @@ export default function Search({ onChangeCity }) {
         placeholder="Enter city name"
         id="searchInput"
         onChange={updateCity}
+        autoFocus="on"
       />
       <button type="submit" className="search_button">
         <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
