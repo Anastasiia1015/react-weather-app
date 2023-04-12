@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios  from "axios";
 import tempPic from "./images/unknown.png";
 import { RotatingLines } from 'react-loader-spinner';
+import DateInfo from "./DateInfo";
 
 
 
@@ -12,20 +13,20 @@ export default function CurrentWeather({ city }) {
     axios
       .get(apiUrl)
       .then((response) => {
-        console.log(response)
         setWeatheData({
             temperature: Math.round(response.data.main.temp),
             humidity: response.data.main.humidity,
             description: response.data.weather[0].description,
             wind: response.data.wind.speed,
-            icon: response.data.weather[0].icon
+            icon: response.data.weather[0].icon,
+            timezone:response.data.timezone,
         });
       })
       .catch((error) => {
         console.error("Error fetching weather data:", error);
       });
   }, [city]);
-  if(weatherData){
+  if(weatherData.temperature){
     return (
       <div className="CurrentWeather">
       <div className="WeatherInfo col">
@@ -55,12 +56,7 @@ export default function CurrentWeather({ city }) {
         </div>
       </div>
     </div>
-    <div className="DateInfo col">
-      <h2 className="city">{city}</h2>
-      <p className="currentDay">Saturday</p>
-      <p className="date">30.10.2022</p>
-      <p className="time">19:17</p>
-    </div>
+    <DateInfo city={city} timezone={weatherData.timezone}/>
     </div>
   );
 }else{
@@ -69,7 +65,7 @@ export default function CurrentWeather({ city }) {
     <RotatingLines
     strokeColor="lightblue"
     strokeWidth="5"
-    animationDuration="0.1"
+    animationDuration="3"
     width="96"
     visible={true}
     />
