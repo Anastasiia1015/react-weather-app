@@ -1,4 +1,5 @@
 import React from "react";
+import IMAGES  from "./images/images";
 import dsun from "./images/01d.png"
 import nsun from "./images/01n.png"
 import dsuncloud from "./images/02n.png"

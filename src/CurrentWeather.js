@@ -3,6 +3,8 @@ import axios  from "axios";
 import { RotatingLines } from 'react-loader-spinner';
 import DateInfo from "./DateInfo";  
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
+
                                                         
 
 
@@ -21,7 +23,7 @@ export default function CurrentWeather({ city }) {
       .get(apiUrl)
       .then((response) => {
         setWeatheData({
-            temperature: Math.round(response.data.main.temp),
+            temperature:response.data.main.temp,
             humidity: response.data.main.humidity,
             description: response.data.weather[0].description,
             wind: response.data.wind.speed,
@@ -41,13 +43,8 @@ export default function CurrentWeather({ city }) {
       <div className="row">
         <WeatherIcon icon={weatherData.icon} description={weatherData.description}/>
         <div className="col">
-        <p className="temperature">
-        <span id="degrees">{weatherData.temperature}</span>
-        <span>°C</span>
-        </p>
-          <a href="/" id="convert">
-            Fahrenheit
-          </a>
+          <WeatherTemperature celsius={weatherData.temperature}/>
+          
           <ul className="addinfo">
             <li>
               <span id="description">{weatherData.description}</span>

@@ -16,3 +16,5 @@ const IMAGES  = {
     dfog: require('./50d.png').default,
     nfog: require('./50n.png').default
 }
+
+export default IMAGES;
