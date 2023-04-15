@@ -1,8 +1,8 @@
 import React from "react";
 import dsun from "./images/01d.png"
 import nsun from "./images/01n.png"
-import dsuncloud from "./images/02n.png"
-import nsuncloud from "./images/02d.png"
+import dsuncloud from "./images/02d.png"
+import nsuncloud from "./images/02n.png"
 import dcloudsun from "./images/03d.png"
 import ncloudsun from "./images/03n.png"
 import dcloud from "./images/04d.png"
@@ -35,5 +35,5 @@ export default function WeatherIcon({icon, description}){
         "50d" : dfog,
         "50n" : nfog
       }
-      return <img src={iconMapping[icon]} alt={description} />
+      return <img src={iconMapping[icon]} alt={description} className="col"/>
 }

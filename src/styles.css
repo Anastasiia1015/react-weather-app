@@ -56,3 +56,20 @@
 .DateInfo .date {
   margin: 0;
 }
+#convert {
+  text-decoration: none;
+}
+#souce-link{
+  text-decoration: none;
+}
+#convert:hover{
+  text-decoration: underline;
+}
+#souce-link:hover{
+  text-decoration: underline;
+}
+.forecastTemperature {
+  display: flex;
+  justify-content: space-around;
+  max-width: 128;
+}
