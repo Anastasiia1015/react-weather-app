@@ -35,5 +35,5 @@ export default function WeatherIcon({icon, description}){
         "50d" : dfog,
         "50n" : nfog
       }
-      return <img src={iconMapping[icon]} alt={description} className="col"/>
+      return <img src={iconMapping[icon]} alt={description} className="col img-fluid"  />
 }

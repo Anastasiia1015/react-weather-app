@@ -9,6 +9,9 @@
 .Search {
   top: 0;
   margin: 60px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0px;
 }
 .Search input {
   padding: 5px 80px;
@@ -16,6 +19,8 @@
   border-radius: 10px;
   margin: 0;
   background-color: var(--sub_color);
+  
+  
 }
 .Search .search_button {
   color: var(--myblue);
@@ -71,5 +76,50 @@
 .forecastTemperature {
   display: flex;
   justify-content: space-around;
-  max-width: 128;
+}
+
+.Forecast{
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 870px) {
+  .Search input {
+    padding: 5px 40px;
+  }
+  .App{
+    margin-left: 10%;
+  }
+}
+@media (max-width: 450px){
+  .Search input {
+    padding: 5px 20px;
+  }
+  .DateInfo .city {
+    font-size: 30px;
+  }
+  .day{
+    font-size: 13px;
+  }
+  .forecastTemperature{
+    font-size: 13px;
+  }
+  
+}
+@media (max-width: 380px){
+  .Search input {
+    padding: 2px 10px;
+    font-size: 13px;
+  }
+  .App{
+    margin-left: 5%;
+    margin-right: 10%;
+  }
+}
+@media(max-width: 768px){
+  .Forecast{
+    justify-content: flex-start;
+  }
+  .DailyForecast{
+    padding-top: 20px;
+  }
 }

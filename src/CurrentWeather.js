@@ -14,10 +14,11 @@ export default function CurrentWeather({ weatherData ,city}) {
   if(weatherData.temperature){
     return (
       <div className="CurrentWeather">
-      <div className="WeatherInfo col">
+      <div className="WeatherInfo col-6">
       <div className="row">
         
-        <WeatherIcon icon={weatherData.icon} description={weatherData.description}/>
+        <WeatherIcon icon={weatherData.icon} description={weatherData.description}/> 
+      
         
         <div className="col">
           <WeatherTemperature celsius={weatherData.temperature}/>

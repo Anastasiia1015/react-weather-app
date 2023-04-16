@@ -24,7 +24,7 @@ export default function Forecast({coordinates}) {
         {forecastData.daily.map(function(dailyforecast, index){
           if(index < 5){
             return (
-              <div key={index} className="col">
+              <div key={index} className="col-4 DailyForecast col-md-2">
                 <DailyForecast dailyData = {dailyforecast}/> 
               </div>
             )

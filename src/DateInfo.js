@@ -31,7 +31,7 @@ export default function DateInfo({ city, timezone}) {
     month = `0${month}`
   }
   return (
-    <div className="DateInfo col">
+    <div className="DateInfo col-6">
       <h2 className="city">{city}</h2>
       <p className="currentDay">{day}</p>
       <p className="date">{date}.{month}.{year}</p>
