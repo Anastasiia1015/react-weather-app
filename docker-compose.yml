@@ -1,0 +1,8 @@
+version: '3'
+services:
+  react-app:
+    build: .
+    ports:
+      - 4000:3000
+    environment:
+      - API_KEY=bd3bb6534458ba51b48c49f5155745b6

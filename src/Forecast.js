@@ -7,7 +7,7 @@ export default function Forecast({coordinates}) {
   useEffect(()=>{
     let latitude=coordinates.latitude;
     let longitude=coordinates.longitude;
-    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=bd3bb6534458ba51b48c49f5155745b6&units=metric`;
+    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}&units=metric`;
     axios.get(apiURL)
     .then((response) => {
       console.log(response.data.daily)
