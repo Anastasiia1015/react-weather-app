@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Weather React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React web application that displays weather information for any city in the world.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+The application offers the following features:
 
-### `npm start`
+- Displays weather information such as temperature, humidity, wind speed, and a forecast for the following 5 days.
+- The user can toggle between Celsius and Fahrenheit units.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In this project, the following technologies were used:
 
-### `npm test`
+- React
+- Bootstrap
+- OpenWeather API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To use this application, you must have Docker and Docker Compose installed on your computer. You can download and install Docker from [here](https://www.docker.com/get-started) and Docker Compose from [here](https://docs.docker.com/compose/install/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To start the application, navigate to the root directory of the project in your terminal and run the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```js
+docker-compose up
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This will build the Docker containers and start the development server. You can then access the application by visiting http://localhost:3000 in your web browser.
 
-### `npm run eject`
+## Configuration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To use the OpenWeather API, you will need to obtain an API key from their website. You can sign up for a free API key [here](https://home.openweathermap.org/users/sign_up).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In the `docker-compose.yml` file, change the following environment variable under the `react-app` service:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```js
+environment:
+API_KEY: YOUR_API_KEY_HERE
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Replace `YOUR_API_KEY_HERE` with your actual API key.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To use the application, enter the name of a city in the search bar and press the "Search" button. The application will retrieve the current weather conditions and forecast for the city and display them on the screen.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Credits
 
-### Analyzing the Bundle Size
+This project was created by Anastasiia Peliukhovska. The weather information is provided by the OpenWeather API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
