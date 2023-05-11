@@ -19,7 +19,7 @@ export default function App() {
       longitude: 21.017532
     }})
   useEffect(() => {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bd3bb6534458ba51b48c49f5155745b6&units=metric`;
     axios
       .get(apiUrl)
       .then((response) => {
